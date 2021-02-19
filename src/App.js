@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import AllCocktails from "./pages/AllCocktails";
+import NavBar from "./components/NavBar";
+import CocktailImage from "./pages/CocktailImage";
+import AboutPage from "./pages/AboutPage";
+import DetailedPage from "./pages/DetailedPage";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+} from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar></NavBar>
+      <Switch>
+        <Route path="/list" component={AllCocktails}></Route>
+        <Route
+          path="/cocktailImage/:category+"
+          component={CocktailImage}
+        ></Route>
+        <Route path="/cocktail/:id" component={DetailedPage}></Route>
+        <Route path="/about" component={AboutPage}></Route>
+      </Switch>
     </div>
   );
 }
