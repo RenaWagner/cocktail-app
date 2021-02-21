@@ -32,7 +32,7 @@ export default function DetailedPage() {
             src={cocktail.strDrinkThumb}
             alt={cocktail.strDrink}
             style={{ float: "left", width: 300 }}
-            className="mb-3 ml-5"
+            className="mb-3 ml-5 mr-5"
           />
         );
       })}
@@ -43,17 +43,29 @@ export default function DetailedPage() {
           </h2>
         );
       })}
-      <p className="text-secondary text-left ml-4">Cocktail category:</p>
+      <p className="text-secondary text-left">Cocktail category:</p>
       {cocktailData.map((cocktail) => {
-        return <p className="text-left ml-4">{cocktail.strCategory}</p>;
+        return (
+          <p className="text-left ml-4" key={cocktail.idDrink}>
+            {cocktail.strCategory}
+          </p>
+        );
       })}
-      <p className="text-secondary text-left ml-4">Alcohol:</p>
+      <p className="text-secondary text-left">Alcohol:</p>
       {cocktailData.map((cocktail) => {
-        return <p className="text-left ml-4">{cocktail.strAlcoholic}</p>;
+        return (
+          <p className="text-left ml-4" key={cocktail.idDrink}>
+            {cocktail.strAlcoholic}
+          </p>
+        );
       })}
-      <p className="text-secondary text-left ml-4">How to make:</p>
+      <p className="text-secondary text-left">How to make:</p>
       {cocktailData.map((cocktail) => {
-        return <p className="text-left ml-4">{cocktail.strInstructions}</p>;
+        return (
+          <p className="text-left ml-4" key={cocktail.idDrink}>
+            {cocktail.strInstructions}
+          </p>
+        );
       })}
     </div>
   );
