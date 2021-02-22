@@ -15,9 +15,6 @@ export default function SearchPage() {
     set_cocktailData(res.data.drinks);
     // console.log("done fetching");
 
-    if (cocktailData.length < 1) {
-      console.log("Cannot find data with the searched word!");
-    }
     set_searchText("");
   };
 
@@ -41,6 +38,7 @@ export default function SearchPage() {
             return (
               <SearchedCocktailCard
                 key={cocktail.idDrink}
+                id={cocktail.idDrink}
                 name={cocktail.strDrink}
                 img={cocktail.strDrinkThumb}
                 category={cocktail.strCategory}

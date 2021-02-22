@@ -27,29 +27,20 @@ export default function DetailedPage() {
     <div>
       {cocktailData.map((cocktail) => {
         return (
-          <div>
+          <div key={cocktail.idDrink}>
             <img
-              key={cocktail.idDrink}
               src={cocktail.strDrinkThumb}
               alt={cocktail.strDrink}
               style={{ float: "left", width: 300 }}
               className="mb-3 ml-5 mr-5"
             />
-            <h2 key={cocktail.idDrink} className="mt-5">
-              {cocktail.strDrink}
-            </h2>
+            <h2 className="mt-5">{cocktail.strDrink}</h2>
             <p className="text-secondary text-left">Cocktail category:</p>
-            <p className="text-left ml-4" key={cocktail.idDrink}>
-              {cocktail.strCategory}
-            </p>
+            <p className="text-left ml-4">{cocktail.strCategory}</p>
             <p className="text-secondary text-left">Alcohol:</p>
-            <p className="text-left ml-4" key={cocktail.idDrink}>
-              {cocktail.strAlcoholic}
-            </p>
+            <p className="text-left ml-4">{cocktail.strAlcoholic}</p>
             <p className="text-secondary text-left">How to make:</p>
-            <p className="text-left ml-4" key={cocktail.idDrink}>
-              {cocktail.strInstructions}
-            </p>
+            <p className="text-left ml-4">{cocktail.strInstructions}</p>
           </div>
         );
       })}
