@@ -7,19 +7,18 @@ export default function NavBar() {
       <NavLink
         className="btn btn-outline-info mr-2"
         exact
-        to="/list"
-        activeStyle={{ fontWeight: "bold", fontSize: "italic" }}
-      >
-        List of Cocktails
-      </NavLink>
-
-      <NavLink
-        className="btn btn-outline-info mr-2"
-        exact
         to="/about"
         activeStyle={{ fontWeight: "bold", fontSize: "italic" }}
       >
         About this website
+      </NavLink>
+      <NavLink
+        className="btn btn-outline-info mr-2"
+        exact
+        to="/list"
+        activeStyle={{ fontWeight: "bold", fontSize: "italic" }}
+      >
+        List of Cocktails
       </NavLink>
 
       <NavLink

@@ -19,6 +19,7 @@ function App() {
     <div className="App">
       <NavBar></NavBar>
       <Switch>
+        <Route path="/about" component={AboutPage}></Route>
         <Route path="/list" component={AllCocktails}></Route>
         <Route
           path="/cocktailImage/:category+"
@@ -26,7 +27,6 @@ function App() {
         ></Route>
         <Route path="/cocktail/:id" component={DetailedPage}></Route>
         <Route path="/search" component={SearchPage}></Route>
-        <Route path="/about" component={AboutPage}></Route>
       </Switch>
     </div>
   );

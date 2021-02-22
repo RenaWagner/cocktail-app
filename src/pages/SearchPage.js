@@ -25,7 +25,7 @@ export default function SearchPage() {
 
   return (
     <div>
-      <p className="mt-5">Search cocktails by putting the keyword:</p>
+      <p className="mt-5">Search cocktails by putting the name:</p>
       <input
         type="text"
         className="mt-2"
