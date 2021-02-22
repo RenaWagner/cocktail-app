@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import CocktailImage from "./pages/CocktailImage";
 import AboutPage from "./pages/AboutPage";
 import DetailedPage from "./pages/DetailedPage";
+import SearchPage from "./pages/SearchPage";
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,6 +25,7 @@ function App() {
           component={CocktailImage}
         ></Route>
         <Route path="/cocktail/:id" component={DetailedPage}></Route>
+        <Route path="/search" component={SearchPage}></Route>
         <Route path="/about" component={AboutPage}></Route>
       </Switch>
     </div>

@@ -21,6 +21,15 @@ export default function NavBar() {
       >
         About this website
       </NavLink>
+
+      <NavLink
+        className="btn btn-outline-info mr-2"
+        exact
+        to="/search"
+        activeStyle={{ fontWeight: "bold", fontSize: "italic" }}
+      >
+        Search Cocktails
+      </NavLink>
     </div>
   );
 }

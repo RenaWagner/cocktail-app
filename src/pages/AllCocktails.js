@@ -22,8 +22,8 @@ export default function AllCocktails() {
     getCocktailList();
   }, []);
 
-  console.log(cocktailList);
-  console.log(cocktailList.strCategory);
+  // console.log("hello");
+  //   console.log(cocktailList.strCategory);
 
   return (
     <div>
